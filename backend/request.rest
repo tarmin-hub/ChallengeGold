@@ -1,0 +1,109 @@
+//crate User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name":"sinta",
+  "email":"sinta@gmail.com",
+  "password":"12345",
+  "confPassword":"12345",
+  "role": "user"
+}
+
+
+#####
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/1c3f203d-d18c-439f-83b9-d488edb7be65
+
+####
+// update User
+
+PATCH http://localhost:5000/users/e0b3f7d1-1e6b-46a6-baf7-0e2f096c3479
+Content-Type: application/json
+
+{
+  "name":"sinta1",
+  "email":"sinta@gmail.com",
+  "password":"12345",
+  "confPassword":"12345",
+  "role": "user"
+}
+
+
+###
+// Delete User
+DELETE  http://localhost:5000/users/e0b3f7d1-1e6b-46a6-baf7-0e2f096c3479
+
+
+###
+//Login user pegawai
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"dani@gmail.com",
+  "password":"12345"
+}
+
+###
+//Login user admin
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"admin@gmail.com",
+  "password":"12345"
+}
+
+
+###
+GET  http://localhost:5000/me
+
+
+###
+// log out
+DELETE http://localhost:5000/logout
+
+
+
+###
+
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Single Products
+
+GET http://localhost:5000/products/ba34b1da-ee93-4ced-b74a-565bb28ffcfe
+
+###
+// Post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+  "name":"product 5",
+  "price":10000
+}
+
+###
+//Update product
+PATCH  http://localhost:5000/products/ba34b1da-ee93-4ced-b74a-565bb28ffcfe
+Content-Type: application/json
+
+{
+  "name":"product update",
+  "price":7000
+}
+
+###
+// Delete product
+DELETE   http://localhost:5000/products/ba34b1da-ee93-4ced-b74a-565bb28ffcfe
+
+
